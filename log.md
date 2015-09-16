@@ -12,7 +12,15 @@ As a starting point for analysis I've created a subset of the original data with
 Done using [csvkit](https://github.com/onyxfish/csvkit).
 
 ```
-csvcut -t -c 2,3,5 data/scrobbles.tsv > data/scrobbles-cut.csv
+csvcut -t -c 2,3,5 data/scrobbles.tsv > module-1/scrobbles-cut.csv
 ```
 
 This gets me just the 'unixtime' 'track name' and 'artist name' columns.
+
+## Module 2 - The beatles
+
+Just so I'm not duplicating 4MB of data all over the place, I thought I'd subset it for the Module 2 exercise. So now we have all of The Beatles plays.
+
+```
+csvgrep -c 3 -m "The Beatles" module-1/scrobbles-cut.csv > module-2/the-beatles.csv
+```
