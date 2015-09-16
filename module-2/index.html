@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 with HTML Elements</title>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+	</head>
+	<body>
+
+		<h1>Exercises for Module 2</h1>
+		<h2>Yay! An SVG.</h2>
+		<svg width="500" height="200">
+			<line x1="10" y1="10" x2="190" y2="190" stroke="blue" stroke-width="3" />
+			<line x1="190" y1="190" x2="400" y2="0" stroke="red" stroke-width="3" />
+			<rect x="200" y="10" width="100" height="100" fill="orange" />
+			<circle cx="300" cy="140" r="50" fill="violet" />
+			<text x="208" y="100" fill="charcoal" font-size="42" font-weight="bold" font-family="Helvetica">Lorem ipsum</text>
+		</svg>
+		<p>There's also a bunch of data. Check the console. It's all the times I've played a track by <a href="http://www.last.fm/user/drzax/library/music/The+Beatles">The Beatles</a> in the last decade.</p>
+
+		<script type="text/javascript">
+			d3.csv('/the-beatles.csv', function(data) {
+				console.log(data);
+			});
+		</script>
+
+	</body>
+</html>
