@@ -1,7 +1,7 @@
 csvkit==0.9.1
 dbf==0.94.3
 jdcal==1.0
-openpyxl==2.2.0b1
+openpyxl==2.4.2
 python-dateutil==2.2
 six==1.9.0
 SQLAlchemy==1.0.8
